@@ -1,0 +1,77 @@
+html {
+	overflow: hidden;
+}
+#swears {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+p {
+	color: black;
+	font-size: 1.5vw;
+}
+
+#overlay {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 0;
+	background-color: red;
+	width: 80vw;
+	height: 85vh;
+	z-index: 1;
+	overflow: hidden;
+	border-radius: 25px;
+	display: none;
+}
+
+#close {
+	float: right;
+	padding: 2vw;
+	width: 1.5vw;
+	cursor: pointer;
+	pointer-events: fill;
+}
+
+#choose {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#history {
+	left: 0;
+	bottom: 0;
+    position: absolute;
+	font-size: 1vw;
+	overflow-y: scroll;
+	padding: 2vw;
+	height: 15vh;
+}
+
+#fileInput {
+	display: none;
+}
+
+#utang {
+	display: none;
+}
+
+#utangan {
+	display: none;
+}
+
+.counts {
+	display: inline-block;
+	padding: 3vw;
+	text-align: center;
+}
+
+.curser {
+	display: inline-block;
+}
+
