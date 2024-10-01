@@ -1,5 +1,6 @@
-html {
+#html {
 	overflow: hidden;
+	background: rgba(184,158,195,1);
 }
 #swears {
 	position: absolute;
@@ -8,9 +9,17 @@ html {
 	transform: translate(-50%, -50%);
 }
 
-p {
-	color: black;
+.p {
+	color: #633975;
+	font-family: "Josefin Sans", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
 	font-size: 1.5vw;
+}
+
+button {
+	cursor: pointer;
 }
 
 #overlay {
@@ -20,7 +29,7 @@ p {
 	transform: translate(-50%, -50%);
 	padding: 0;
 	background-color: red;
-	width: 80vw;
+	width: 50vw;
 	height: 85vh;
 	z-index: 1;
 	overflow: hidden;
@@ -65,12 +74,32 @@ p {
 	display: none;
 }
 
+#lilac {
+	background: radial-gradient(circle, rgba(184,158,195,1) 0%, rgba(184,158,195,1) 60%, rgba(255,255,255,1) 60%);
+}
+
+#brown {
+	background: radial-gradient(circle, rgba(249,195,119,1) 0%, rgba(249,195,119,1) 60%, rgba(255,255,255,1) 60%);
+}
+
+.theme {
+	border-radius: 50%;
+	width: 3vw;
+	height: 3vw;
+	border: 0.4vw solid black;
+	cursor: pointer;
+	pointer-events: fill;
+}
+
 .counts {
 	display: inline-block;
 	padding: 3vw;
 	text-align: center;
+	border-radius: 9px;
+	border: 1px solid black;
 }
 
 .curser {
 	display: inline-block;
 }
+
