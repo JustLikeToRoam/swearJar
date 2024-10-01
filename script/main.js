@@ -36,22 +36,31 @@ function checkIfCustom() {
 }
 
 function submitForm() {
-	output = "<tr><th>" + document.getElementById("curser").innerHTML + "</th><th>";
-	if (document.getElementById("curser").innerHTML == "Hannah") {
-		incrementHannah()
+	if (document.getElementById("swear").value != "name") {
+		output = "<tr><th>" + document.getElementById("curser").innerHTML + "</th><th>";
+		if (document.getElementById("swear").value == "other") {
+			if (document.getElementById("inputSwear").value.trim() == "") {
+				window.alert("Input a swear!");
+				return 0;
+			} else {
+				output += document.getElementById("inputSwear").value + "</th><th>";
+			}
+		} else {
+			output += document.getElementById("swear").value + "</th><th>";
+		}
+		const date = new Date();
+		output += date;
+		if (document.getElementById("curser").innerHTML == "Hannah") {
+			incrementHannah()
+		} else {
+			incrementMatt()
+		}
+		document.getElementById("historyTable").innerHTML = output + document.getElementById("historyTable").innerHTML;
+		updateUtang();
+		closeOverlay();
 	} else {
-		incrementMatt()
+		window.alert("Select a swear!");
 	}
-	if (document.getElementById("swear").value == "other") {
-		output += document.getElementById("inputSwear").value + "</th><th>";
-	} else {
-		output += document.getElementById("swear").value + "</th><th>";
-	}
-	const date = new Date();
-	output += date;
-	document.getElementById("historyTable").innerHTML = output + document.getElementById("historyTable").innerHTML;
-	updateUtang();
-	closeOverlay();
 }
 
 function save() {
@@ -94,7 +103,7 @@ function load() {
 }
 
 function subLoad() {
-	document.getElementById("fileInput" ).click();
+	document.getElementById("fileInput").click();
 }
 
 function updateUtang() {
@@ -114,6 +123,24 @@ function updateUtang() {
 	document.getElementById("utang").style.display = "inline-block"
 	document.getElementById("utangan").innerHTML = utangan;
 	document.getElementById("utang").innerHTML = utang
+}
+
+function changeTheme() {
+	if (document.getElementById("lilac") != null) {
+		document.getElementById("lilac").id = "brown";
+		document.getElementById("html").style.background = '#f9c377';
+		const a = document.getElementsByClassName("p")
+		for (let i = 0; i < a.length; i++) {
+			a[i].style.color = "#ae4b30";
+		}
+	} else if (document.getElementById("brown") != null) {
+		document.getElementById("brown").id = "lilac";
+		document.getElementById("html").style.background = 'rgba(184,158,195,1)';
+		const a = document.getElementsByClassName("p")
+		for (let i = 0; i < a.length; i++) {
+			a[i].style.color = "#633975";
+		}
+	}
 }
 
 var interval = ""
