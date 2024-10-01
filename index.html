@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html id="html">
 	<head>
 		<title>Swear Jar</title>
 		<link rel="stylesheet" href="css/main.css">
-		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<div id="overlay">
 			<img id="close" src="img/x.svg" onclick="closeOverlay()">
 			<div id="choose" class="counts">
-				<p id="curser"></p>
+				<p class="p"  id="curser"></p>
 				<br><br>
-				<label for="cars">Choose a car:</label>
+				<label for="swear">Choose a swear:</label>
 				<select id="swear" name="swear">
 					<option value="name" disabled="true" selected="true">Select Swear Word</option>
 					<option value="Fuck">Fuck</option>
@@ -36,22 +38,24 @@
 		</div>
 		<div id="swears">
 			<div class="counts">
-				<p>Number of Swears</p>
-				<p id="swearHannah">0</p>
+				<p class="p" >Number of Swears</p>
+				<p class="p"  id="swearHannah">0</p>
 				<button onclick="sworeHannah()">Swore</button>
 			</div>
 			<div class="counts">
-				<p>Number of Swears</p>
-				<p id="swearMatt">0</p>
+				<p class="p" >Number of Swears</p>
+				<p class="p"  id="swearMatt">0</p>
 				<button onclick="sworeMatt()">Swore</button>
 			</div>
 		</div>
 		<button onclick="save()">Save</button>
 		<button onclick="subLoad()">Load</button>
 		<input type="file" id="fileInput" accept=".txt" onchange="load()">
-		<p id="desc">For each swear word, there's a 1 peso utang.</p>
-		<p id="utangan">Current utangan: name</p><br>
-		<p id="utang">Total utang: utang</p>
+		<p class="p"  id="desc">For each swear word, there's a 1 peso utang.</p>
+		<p class="p"  id="utangan">Current utangan: name</p><br>
+		<p class="p"  id="utang">Total utang: utang</p>
+		<div class="theme" id="lilac" onclick="changeTheme()">
+		</div>
 		<div id="history">
 				<table>
 					<tbody id="historyTable" style="overflow: scroll-y"></tbdody>
